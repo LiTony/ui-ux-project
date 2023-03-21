@@ -1,4 +1,5 @@
 :root {
+    height:100svh;
     --pink-rgb: 255 192 203;
     --blue-rgb: 135 206 235;
     --blue-rgb-comp: 222 155 80;
@@ -20,9 +21,9 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
-    border: 0.5vh solid rgb(var(--color-test-comp) / 87%);
+    border: 0.5svh solid rgb(var(--color-test-comp) / 87%);
     aspect-ratio: 20 / 1;
-    border-radius: 1vw;
+    border-radius: 1svw;
     background-color: rgb(var(--color-test) / 100%);
     overflow:hidden;
     position: relative;
@@ -37,10 +38,10 @@
     justify-self: center;
     align-self: center;
     opacity: 1;
-    font-size: 5vh;
+    font-size: 5svh;
     text-shadow: 0px 0px 0.5rem rgb(255, 255, 255);
     font-weight: 400;
-    letter-spacing: 0.1vw;
+    letter-spacing: 0.1svw;
     text-decoration: none;
 }
 
@@ -58,10 +59,10 @@
     justify-self: center;
     align-self: center;
     opacity: 1;
-    font-size: 3vh;
+    font-size: 3svh;
     text-shadow: 0px 0px 0.5rem rgb(255, 255, 255);
     font-weight: 400;
-    letter-spacing: 0.1vw;
+    letter-spacing: 0.1svw;
     text-decoration: none;
 }
 
@@ -70,7 +71,7 @@
     display: flex;
     border: 3px solid rgb(var(--primary-rgb) / 80%);
     aspect-ratio: 16 / 10;
-    border-radius: 1vw;
+    border-radius: 1svw;
     background-color: rgb(var(--color-test-comp) / 15%);
     overflow:hidden;
     position: relative;
@@ -78,35 +79,80 @@
 }
 
 .content > .image {
-    display: block;
+    display: flex;
     max-width:500px;
     max-height:500px;
     width: auto;
     height: auto;
-    margin: 1vh;
-    padding: 1vh;
+    margin: 1svh;
+    padding: 1svh;
     position: relative;
-    border: 0.5vh solid rgb(var(--primary-rgb) / 80%);
-    border-radius: 1vw;
+    border: 0.5svh solid rgb(var(--primary-rgb) / 80%);
+    border-radius: 1svw;
     background-color:rgb(var(--color-test-comp) / 35%);
 }
 
 .content > .summary {
     display: block;
-    width: 100%;
-    height: auto;
-    margin: 1vh;
-    padding: 1vh;
+    max-height:500px;
+    flex-grow: 1;
+    margin: 1svh;
+    padding: 1svh;
     position: relative;
-    border: 0.5vh solid rgb(var(--primary-rgb) / 80%);
-    border-radius: 1vw;
+    border: 0.5svh solid rgb(var(--primary-rgb) / 80%);
+    border-radius: 1svh;
     background-color:rgb(var(--color-test) / 65%);
     font-family: "Monaco", monospace;
-    color: rgb(var(--color-test-comp) / 75%);
     opacity: 1;
-    font-size: 3vh;
+    font-size: 3svh;
     text-shadow: 0px 0px 0.5rem rgb(255, 255, 255);
     font-weight: 400;
-    letter-spacing: 0.1vw;
+    letter-spacing: 0.1svw;
+    overflow: hidden;
+}
+
+.content > .summary > .link {
     text-decoration: underline;
+    display:inline-block;
+    position: relative;
+    color: rgb(var(--color-test-comp) / 100%);
+}
+.content > .summary > .text {
+    padding-top: 1svh;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(var(--color-test-comp) / 100%);
+}
+.content > .summary > .resources {
+    padding-top: 3svh;
+}
+.content > .summary > .resources > .reslink {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(var(--color-test-comp) / 100%);
+}
+
+.content > .summary > .resources > .reslink:is(:hover) {
+    text-decoration: underline;
+}
+
+.summary > .resources > .link-icon {
+    margin-right: -1svw;
+    width: 3svw;
+    height:3svh;
+    vertical-align:text-bottom;
+    
+}
+
+.link {
+    color: rgb(var(--color-test-comp) / 87%);
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    opacity: 1;
+    font-size: 3svh;
+    text-shadow: 0px 0px 0.5rem rgb(255, 255, 255);
+    font-weight: 400;
+    letter-spacing: 0.1svw;
+    text-decoration: none;
 }
